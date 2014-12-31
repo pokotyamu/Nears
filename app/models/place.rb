@@ -1,4 +1,4 @@
 class Place < ActiveRecord::Base
-  geocoded_by :address
+  geocoded_by :exp
   after_validation :geocode
 end
