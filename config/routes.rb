@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'map/' => 'map#index' 
 
   resources :places
-
+  root to: "map#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
