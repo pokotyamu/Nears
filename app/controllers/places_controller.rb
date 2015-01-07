@@ -4,7 +4,7 @@ class PlacesController < ApplicationController
   # GET /places
   # GET /places.json
   def index
-    @places = Place.all
+    @places = Place.where(username: current_user.username)
   end
 
   # GET /places/1
@@ -25,7 +25,8 @@ class PlacesController < ApplicationController
   # POST /places.json
   def create
     @place = Place.new(place_params)
-
+    @place.username = current_user.username
+    
     respond_to do |format|
       if @place.save
         format.html { redirect_to @place, notice: 'Place was successfully created.' }
@@ -69,6 +70,6 @@ class PlacesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def place_params
-      params.require(:place).permit(:title, :exp, :lat, :lon)
+      params.require(:place).permit(:title, :exp, :lat, :lon, :username)
     end
 end
