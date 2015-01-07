@@ -1,5 +1,5 @@
+# -*- coding: utf-8 -*-
 source 'https://rubygems.org'
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
@@ -38,7 +38,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-
+# googleMap 
 gem "gmaps4rails"
 gem "geocoder"
 
+# User管理
+gem "devise"

@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'map/' => 'map#index' 
 
   resources :places
-
+  root to: "map#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
