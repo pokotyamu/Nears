@@ -44,3 +44,10 @@ gem "geocoder"
 
 # User管理
 gem "devise"
+
+#Bootstrap
+gem "less-rails"
+gem "therubyracer"
+gem "twitter-bootstrap-rails"
+gem "font-awesome-rails"
+gem "bootstrap-sass"
